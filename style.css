@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background: #0984e3;
+}
+
+#game-board {
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  backface-visibility: hidden;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+  background: #74b9ff;
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: 0 0 0.2rem #636e72;
+}
+
+.front-face {
+  font-family: webdings, sans-serif;
+  color: #ffeaa7;
+  transform: rotateY(180deg);
+  padding-top: calc(50% - 0.8rem);
+}
+
+.back-face {
+  font-family: Verdana, sans-serif;
+  color: #fdcb6e;
+  padding-top: calc(50% - 1.5rem);
+}
+
+
+.matched > div {
+  background: #dfe6e9;
+  color: #b2bec3 !important;
+  transition: background 0.2s, color 0.2s;
+}
