@@ -31,7 +31,7 @@ body {
   backface-visibility: hidden;
 }
 
-.card.flip {
+.flip {
   transform: rotateY(180deg);
 }
 
