@@ -1,6 +1,6 @@
 const board = document.getElementById('game-board');
 const max_cards = 12;
-const card_faces = ['d', 'e', 'f', 'h', 'i', 'j'];
+const card_faces = ['category', 'cake', 'flight', 'fireplace', 'sports', 'whatshot'];
 const color_classes = ['sour-lemon', 'mint-leaf', 'pink-glamour', 'prunus-avium', 'pico-pink', 'exodus-fruit'];
 const card_back = '?';
 
@@ -22,6 +22,7 @@ let matched_cards = 0;
     let front = document.createElement('div');
     front.classList.add('front-face');
     front.classList.add(color_classes[j]);
+    front.classList.add('material-icons');
     front.innerHTML = card_faces[j];
     card.append(front);
     let back = document.createElement('div');
