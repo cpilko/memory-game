@@ -42,12 +42,11 @@ body {
   border-radius: 5px;
   background: #74b9ff;
   text-align: center;
-  font-size: 4rem;
+  font-size: 60px !important;
   text-shadow: 0 0 0.2rem #636e72;
 }
 
 .front-face {
-  font-family: webdings, sans-serif;
   transform: rotateY(180deg);
   padding-top: calc(50% - 0.8rem);
 }
