@@ -24,8 +24,6 @@ body {
   height: calc(33.333% - 10px);
   margin: 5px;
   position: relative;
-  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
-  transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
 }
@@ -49,7 +47,6 @@ body {
 
 .front-face {
   font-family: webdings, sans-serif;
-  color: #ffeaa7;
   transform: rotateY(180deg);
   padding-top: calc(50% - 0.8rem);
 }
@@ -60,9 +57,32 @@ body {
   padding-top: calc(50% - 1.5rem);
 }
 
+.sour-lemon {
+  color: #ffeaa7;
+}
+
+.mint-leaf {
+  color: #00b894;
+}
+
+.pink-glamour {
+  color: #e17055;
+}
+
+.prunus-avium {
+  color: #e84393;
+}
+
+.pico-pink {
+  color: #fd79a8;
+}
+
+.exodus-fruit {
+  color: #6c5ce7;
+}
 
 .matched > div {
   background: #dfe6e9;
-  color: #b2bec3 !important;
+  color: #b2bec3;
   transition: background 0.2s, color 0.2s;
 }
