@@ -6,6 +6,8 @@
 
 body {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background: #0984e3;
 }
@@ -14,9 +16,13 @@ body {
   width: 400px;
   height: 400px;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  perspective: 1000px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }
 
 .card {
@@ -24,12 +30,17 @@ body {
   height: calc(33.333% - 10px);
   margin: 5px;
   position: relative;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
   transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
 }
 
 .flip {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .front-face,
@@ -38,17 +49,20 @@ body {
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden; /*fix for Safari */
-  transform: rotateX(0deg); /*fix for Firefox */
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg); /*fix for Firefox */
   position: absolute;
   border-radius: 5px;
   background: #74b9ff;
   text-align: center;
   font-size: 60px !important;
+  text-shadow: 0 0 3.2px #636e72;
   text-shadow: 0 0 0.2rem #636e72;
 }
 
 .front-face {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
   padding-top: calc(50% - 0.8rem);
 }
 
@@ -85,5 +99,6 @@ body {
 .matched > div {
   background: #dfe6e9;
   color: #b2bec3;
+  -webkit-transition: background 0.2s, color 0.2s;
   transition: background 0.2s, color 0.2s;
 }
